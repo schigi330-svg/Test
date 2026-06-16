@@ -1,0 +1,23 @@
+{
+  "name": "csat-dashboard",
+  "version": "1.0.0",
+  "description": "XXXLutz CSAT Dashboard Desktop App",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "electron": "^28.0.0",
+    "electron-builder": "^24.0.0"
+  },
+  "build": {
+    "appId": "com.xxxlutz.csat",
+    "productName": "CSAT Dashboard",
+    "files": ["main.js", "index.html"],
+    "win": {"target": "nsis"},
+    "mac": {"target": "dmg"},
+    "linux": {"target": "AppImage"}
+  }
+}
