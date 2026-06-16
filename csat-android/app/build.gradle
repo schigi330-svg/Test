@@ -9,12 +9,23 @@ android {
         versionCode 1
         versionName "1.0"
     }
+
+    signingConfigs {
+        release {
+            storeFile file('../csat-release.keystore')
+            storePassword 'xxxlutz2024'
+            keyAlias 'csat-key'
+            keyPassword 'xxxlutz2024'
+        }
+    }
+
     buildTypes {
         debug {
             debuggable true
         }
         release {
             minifyEnabled false
+            signingConfig signingConfigs.release
         }
     }
     namespace 'com.xxxlutz.csat'
